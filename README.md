@@ -1,6 +1,6 @@
 # Evgenii (Eugene) Menshikov
 
-### AI Automation Engineer — I build AI systems and **test them like money depends on it** (because for my clients, it does).
+### AI Automation Engineer — I build AI systems and **test them end to end.
 
 I work **spec-first** — requirements → design → build → test → deploy — so what I ship survives
 contact with real users. That QA discipline is the part most AI work skips, and it's my edge.
