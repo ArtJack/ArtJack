@@ -56,7 +56,7 @@ this domain; most people in it can't build software for it. That overlap is wher
 
 ### 🤝 Work with me
 
-**Hiring?** I'm open to AI engineering, AI automation, and QA roles — remote (US), Sacramento, or SF Bay Area.
+I'm open to AI engineering, AI automation, and QA roles — remote (US), Sacramento, or SF Bay Area.
 **Need something built?** [ArtJack Technology](https://www.artjeck.com) ships websites, e-commerce, AI automation,
 and compliance pipelines for small businesses — fixed scope, tested, documented.
 
