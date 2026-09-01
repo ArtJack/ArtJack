@@ -15,7 +15,7 @@ Everything below is running, tested, and readable.
 - **Production LLM pipeline, live:** [ifta-agent](https://github.com/ArtJack/ifta-agent) files real quarterly IFTA fuel-tax returns for an interstate carrier — **555 automated tests**, backtested against a real state filing **to the penny**, ~$0.10 model cost per reviewed return. Its LLM review agent (**17 grounded tools**) caught filing errors the manual process had been making for years.
 - **Published AI QA agent:** [verdict](https://github.com/ArtJack/verdict) — baseline → delta runs, a fact harness (the model judges, the system measures), signed run history, an exit-code CI gate. **43 releases, 419 tests**, six scored eval fixtures with the **misses published alongside the 8/8s**.
 - **Human-in-the-loop by architecture:** an 8-marketplace commerce engine where irreversible actions are **structurally gated** behind human approval — no approved grant, no code path to the write.
-- **Stack:** Python · TypeScript · FastAPI · Next.js · Anthropic SDK · MCP (built 2 servers from scratch) · RAG/Qdrant · Ollama/LiteLLM self-hosted lab.
+- **Stack:** Python · TypeScript · FastAPI · Next.js · Anthropic SDK · MCP (**3 servers built from scratch — one listed in the official [MCP Server Registry](https://registry.modelcontextprotocol.io/)**) · RAG/Qdrant · Ollama/LiteLLM self-hosted lab.
 - **Open to:** AI engineering · AI automation · QA — remote (US), Sacramento, or SF Bay Area. Also available for **freelance builds** via [ArtJack Technology](https://www.artjeck.com).
 
 ### 🚀 Flagship work
@@ -23,7 +23,7 @@ Everything below is running, tested, and readable.
 | Project | What it is |
 | --- | --- |
 | **[ifta-agent](https://github.com/ArtJack/ifta-agent)** | Production IFTA fuel-tax filing pipeline for interstate carriers. Deterministic math computes every number on the form; an LLM review agent over **17 grounded tools** audits each return against the rulebook and the client's filing history — it caught errors humans had been making for years. **555 tests**, penny-accurate regression, ~$0.10/filing. *Live, filing every quarter for a paying carrier.* |
-| **[verdict](https://github.com/ArtJack/verdict)** | A skeptical **AI QA agent with memory**: baseline → delta runs (NEW/REGRESSED), a **fact harness** so every count is measured rather than composed, a **signed run history** its own audit made imitation-proof, flaky quarantine with expiry, and an exit-code **release gate for CI**. Six scored eval fixtures, **misses published** — including the trap it catches 1 run in 3, measured at n=3. |
+| **[verdict](https://github.com/ArtJack/verdict)** | A skeptical **AI QA agent with memory**: baseline → delta runs (NEW/REGRESSED), a **fact harness** so every count is measured rather than composed, a **signed run history** its own audit made imitation-proof, flaky quarantine with expiry, and an exit-code **release gate for CI**. Ships **`verdict-qa-mcp`**, a read-only MCP server **listed in the official MCP Server Registry**. Six scored eval fixtures, **misses published** — including the trap it catches 1 run in 3, measured at n=3. |
 | **[sales-agent-showcase](https://github.com/ArtJack/sales-agent-showcase)** | Clean-room showcase of a multi-marketplace commerce agent running a live resale business. **Irreversible actions are human-gated structurally** — the reprice call asserts its own execution grant, so there is no code path to the write without an approved approval. 30 tests, CI, runnable on synthetic data. |
 | **[second-brain](https://github.com/ArtJack/second-brain)** | Local-first **RAG** assistant: answers only from your own notes, docs and code, every claim **cited to source**, graded by an eval harness with citation grading. Exposed over **MCP**. |
 | **[lab-control-mcp](https://github.com/ArtJack/lab-control-mcp)** | **MCP** server operating a self-hosted AI lab, with a safety-gated remote shell — allowlist, no shell metacharacters, hard timeouts. |
@@ -45,7 +45,7 @@ A boundary-value pass on a client web app once caught a real off-by-one exactly 
 ### 🏠 Self-hosted AI lab
 
 An always-on lab (Mac mini + Alienware over Tailscale) running **free local models** behind one
-gateway, with two MCP servers I built and a vector store for retrieval. Private by default —
+gateway, with MCP servers I built and a vector store for retrieval. Private by default —
 client data stays inside the building; I reach for a frontier model only when the task earns it.
 
 ### 🧭 Domain edge
